@@ -1,0 +1,11 @@
+/*
+Theme Name: Bosarloji
+Author: Philip Bryan Halim
+Description: Main theme for Bosarloji E-Commerce site
+Version: 1.0
+Tags: black, white, watches, ecommerce
+*/
+
+@import url("./assets/css/reset.css");
+@import url("./assets/css/navigation.css");
+@import url("./assets/css/home.css");

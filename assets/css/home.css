@@ -1,0 +1,177 @@
+.section-1 {
+  height: 100vh;
+  display: flex;
+  flex-basis: 50%;
+  min-width: 700px;
+  min-height: 50vh;
+}
+
+.section-1-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 25px;
+}
+
+.section-1-text {
+  font-size: 50px;
+}
+
+.section-1-subtext {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.section-1-button {
+  margin-top: 20px;
+}
+
+.section-1-cta {
+  padding: 10px 40px;
+  background: rgb(26, 25, 25);
+  color: #fff;
+  font-size: 15px;
+}
+
+.section-1-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.section-1-image {
+  width: 100%;
+  height: 100%;
+}
+
+.section-2 {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row;
+}
+
+.section-image-wrapper, .section-tagline {
+  width: 45%;
+  position: relative;
+}
+
+.section-image {
+  position: relative;
+  height: 280px;
+  width: auto;
+  z-index: 3;
+  margin-left: 50px;
+}
+
+.section-background {
+  position: absolute;
+  width: 350px;
+  height: 280px;
+  background: black;
+  top: 20px;
+  z-index: -1;
+}
+
+.section-2-tagline {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: calc(30px);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.line-divider {
+  margin-top: 5px;
+  height: 2px;
+  width: 50px;
+  background: rgb(41, 41, 41);
+}
+
+.section-subtitle {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.section-3 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-3-tagline {
+  margin-top: 20px;
+  margin-left: 0px;
+  width: 45%;
+}
+
+.section-3-image {
+  width: 330px;
+}
+
+.section-4 {
+  margin-top: 100px;
+}
+
+.section-4-title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 45%;
+  margin-top: 35px;
+}
+
+.product-title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.price {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-1 {
+    min-width: 0px;
+    justify-content: center;
+  }
+
+  .section-1-text {
+    font-size: 37px;
+  }
+
+  .section-1-left {
+    width: 100%;
+  }
+
+  .section-1-right {
+    display: none;
+  }
+
+  .section-2 {
+    margin-top: 0px;
+  }
+
+  .section-image-wrapper {
+    display: none;
+  }
+
+  .section-tagline {
+    width: 100%;
+  }
+}
+
