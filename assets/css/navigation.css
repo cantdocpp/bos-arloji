@@ -4,6 +4,8 @@
   min-width: 800px;
   position: fixed;
   width: 100%;
+  background-color: #fff;
+  z-index: 800;
 }
 
 .web__navigation {
@@ -50,6 +52,7 @@
   display: none;
   animation-duration: 3s;
   width: 150px;
+  background-color: #fff;
 }
 
 .dropdown__content-item {

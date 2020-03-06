@@ -21,8 +21,8 @@
           <div class="dropdown__menu menu main__menu">
             <a href="#" class="dropdown__text">Watches</a>
             <div class="dropdown__content">
-              <a href="#" class="dropdown__content-item">Man Watch</a>
-              <a href="#" class="dropdown__content-item">Woman Watch</a>
+              <a href="<?php echo get_site_url() ?>/man-watch/" class="dropdown__content-item">Man Watch</a>
+              <a href="<?php echo get_site_url() ?>/woman-watch/" class="dropdown__content-item">Woman Watch</a>
             </div>
           </div>
           

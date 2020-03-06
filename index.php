@@ -69,7 +69,7 @@
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
         <div class="product">
-          <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+          <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="product__link">
             <?php 
               if (has_post_thumbnail( $loop->post->ID )) { 
             ?>
@@ -89,3 +89,5 @@
     </div>
   </div>
 </div>
+
+<?php get_footer() ?>
