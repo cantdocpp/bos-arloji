@@ -10,6 +10,7 @@
     wp_enqueue_style( "home-style", get_template_directory_uri() . '/assets/css/home.css' , NULL , microtime() );
     wp_enqueue_style( "footer-style", get_template_directory_uri() . '/assets/css/footer.css' , NULL , microtime() );
     wp_enqueue_style( "category-style", get_template_directory_uri() . '/assets/css/category.css' , NULL , microtime() );
+    wp_enqueue_style( "single-style", get_template_directory_uri() . '/assets/css/single.css' , NULL , microtime() );
   }
 
   function my_filter_head() {

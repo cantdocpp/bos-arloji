@@ -11,10 +11,10 @@
           // get current url with query string.
           $current_url =  home_url( $wp->request );
 
-          if (strpos($current_url, 'man-watch')) {
-            echo 'Man Watch';
-          } else if (strpos($current_url, 'woman-watch')) {
+          if (strpos($current_url, 'woman-watch') == true) {
             echo 'Woman Watch';
+            } else if (strpos($current_url, 'man-watch') == true) {
+            echo 'Man Watch';
           }
         ?>
       </div>
