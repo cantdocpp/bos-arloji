@@ -42,7 +42,15 @@
 
         <div class="site__menu-right">
           <div class="cart menu">
-            <span>Cart</span>
+            <a href="#">Cart( <?php 
+              global $woocommerce;
+              $count = $woocommerce->cart->cart_contents_count;
+              if ($count > 0) {
+                  echo $count;
+              } else {
+                  echo '0';
+              }
+            ?> )</a>
           </div>
         </div>
       </div>

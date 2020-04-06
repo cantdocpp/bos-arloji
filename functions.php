@@ -17,7 +17,20 @@
     remove_action('wp_head', '_admin_bar_bump_cb');
   }
 
+  // when adding product to the cart success and user refresh the page,
+  // it still adding the qty to the cart everytime user refresh
+  // this function stop it
+  function resolve_dupes_add_to_cart_redirect($url = false) {
+      // If another plugin beats us to the punch, let them have their way with the URL
+      if(!empty($url)) { return $url; }
+
+      // Redirect back to the original page, without the 'add-to-cart' parameter.
+      // We add the `get_bloginfo` part so it saves a redirect on https:// sites.
+      return get_bloginfo('url').add_query_arg(array(), remove_query_arg('add-to-cart'));
+  }
+
   add_image_size('small', 150, 150, true);
   add_action("wp_enqueue_scripts", "theme_script");
   add_action('get_header', 'my_filter_head');
+  add_action('add_to_cart_redirect', 'resolve_dupes_add_to_cart_redirect');
 
