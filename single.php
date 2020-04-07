@@ -42,7 +42,6 @@
         <?php
             global $post;
             $product_id = $post->ID;
-            echo $product_id;
             
             $product = new WC_product($product_id);
             $attachment_ids = $product->get_gallery_image_ids();

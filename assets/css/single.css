@@ -86,3 +86,20 @@
     border-radius: 4px;
     font-size: 15px;
 }
+
+/* mobile view */
+
+@media only screen and (max-width: 800px) {
+    .single-product-main {
+        display: block;
+    }
+
+    .single-product-gallery,
+    .single-product-desc {
+        width: 100%;
+    }
+
+    .single-product-desc {
+        margin-top: 30px;
+    }
+}

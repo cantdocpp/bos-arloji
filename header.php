@@ -42,15 +42,22 @@
 
         <div class="site__menu-right">
           <div class="cart menu">
-            <a href="#">Cart( <?php 
-              global $woocommerce;
-              $count = $woocommerce->cart->cart_contents_count;
-              if ($count > 0) {
-                  echo $count;
-              } else {
-                  echo '0';
-              }
-            ?> )</a>
+            <a href="<?php echo get_site_url() ?>/cart/" class="cart__menu">
+              <div class="cart">
+                <img class="cart__logo" src="<?php echo get_template_directory_uri() . "/assets/images/icons/cart.svg" ?>" alt="cart">
+                <div class="cart__menu__qty">
+                  <?php 
+                    global $woocommerce;
+                    $count = $woocommerce->cart->cart_contents_count;
+                    if ($count > 0) {
+                        echo $count;
+                    } else {
+                        echo '0';
+                    }
+                  ?>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
