@@ -1,0 +1,80 @@
+.user-page {
+    width: 600px;
+    margin: 0 auto;
+    padding: 150px 0px;
+}
+
+.user-form-header {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.user-form-label {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user-form-field {
+    margin-top: 15px;
+}
+
+.user-form-field:first-child {
+    margin-top: 0px;
+}
+
+.user-form-input {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    font-size: 13px;
+    border-radius: 3px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.user-form-text {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #000;
+    padding-left: 5px;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.user-form-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.user-form-button {
+    padding: 7px 15px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.user-form-logout {
+    width: 100%;
+    padding: 7px 0px;
+}
+
+.logouy-button {
+    width: 600px;
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 800px) {
+    .user-page {
+        width: 90%;
+        padding: 70px 0px;
+    }
+}

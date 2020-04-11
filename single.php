@@ -29,18 +29,16 @@
         }
     }
 
-    function rupiah($angka){
-	
-        $hasil_rupiah = number_format($angka,2,',','.');
+    function rupiah($angka) {
+        $hasil_rupiah = number_format($angka , 2, ',' , '.');
         return $hasil_rupiah;
-     
     }
 ?>
 
 <div class="container">
     <div class="single-product-page">
         <?php
-            global $post;
+            global $post, $wooProduct;
             $product_id = $post->ID;
             
             $product = new WC_product($product_id);
@@ -54,6 +52,7 @@
                 $imageUrlinSplittedArray = splitImageUrl($shop_single_image_url);
                 array_push($imageUrlInOneArray, $imageUrlinSplittedArray[0]);
             }
+
         ?>
         <div class="single-product-main">
             <div class="single-product-gallery">
@@ -95,6 +94,21 @@
                     <form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
                         <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
+                        <span style="margin-right: 10px; font-size: 14px">Size: </span>
+                        <select class="single-select-button">
+                            <?php 
+                                $attributes = $product->get_attributes();  
+                                foreach ( $attributes as $attribute ):
+                                    $attribute_data = $attribute->get_data();
+                                    $attribute_name = $attribute_data['options'][0];
+                                    // testing pre-formatted output
+                                    echo '<option name="size" value="\$attribute_name\">' . $attribute_name . '</option>'; 
+                                endforeach;
+                            ?>
+                        </select>
+                        
+                        <br />
+
                         <?php
                         do_action( 'woocommerce_before_add_to_cart_quantity' );
 
@@ -120,3 +134,5 @@
         </div>
     </div>
 </div>
+
+<?php get_footer() ?>

@@ -19,6 +19,10 @@
   margin-top: 4px;
 }
 
+.site__logo:hover {
+  color: inherit;
+}
+
 .web__navigation__inner {
   display: flex;
   justify-content: space-between;
@@ -71,6 +75,15 @@
   margin-left: 0px;
 }
 
+.site__menu-right {
+  display: flex;
+}
+
+.right__menu {
+  display: inline-block;
+  transform: translateY(15px);
+}
+
 .menu {
   transform: translateY(15px);
 }
@@ -83,14 +96,23 @@
   margin-left: 0px;
 }
 
-.cart__logo {
+.menu__logo {
   width: 20px;
   height: 20px;
 }
 
-.cart__menu {
+.cart__menu,
+.user__menu {
   display: block;
   position: relative;
+}
+
+.user__menu {
+  margin-right: 20px;
+}
+
+.right__link {
+  display: block;
 }
 
 .cart__menu__qty {

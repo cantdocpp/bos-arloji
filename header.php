@@ -13,9 +13,9 @@
   <nav class="main__navigation">
     <div class="web__navigation">
       <div class="web__navigation__inner">
-        <div class="site__logo">
+        <a href="<?php echo get_site_url() ?>" class="site__logo">
           BosArloji
-        </div>
+        </a >
 
         <div class="site__menu-center">
           <div class="dropdown__menu menu main__menu">
@@ -37,14 +37,18 @@
               Payment Confirmation
             </a>
           </div>
-          
         </div>
 
         <div class="site__menu-right">
-          <div class="cart menu">
-            <a href="<?php echo get_site_url() ?>/cart/" class="cart__menu">
+          <div class="right__menu user__menu">
+            <a href="<?php echo(is_user_logged_in() ? get_site_url() . '/my-account' : get_site_url() . '/login') ?>" class="right__link">
+              <img class="menu__logo" src="<?php echo get_template_directory_uri() . "/assets/images/icons/user.svg" ?>" alt="user logo">
+            </a>
+          </div>
+          <div class="right__menu cart">
+            <a href="<?php echo get_site_url() ?>/cart/" class="right__link">
               <div class="cart">
-                <img class="cart__logo" src="<?php echo get_template_directory_uri() . "/assets/images/icons/cart.svg" ?>" alt="cart">
+                <img class="menu__logo cart__logo" src="<?php echo get_template_directory_uri() . "/assets/images/icons/cart.svg" ?>" alt="cart">
                 <div class="cart__menu__qty">
                   <?php 
                     global $woocommerce;

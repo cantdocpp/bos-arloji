@@ -87,6 +87,17 @@
     font-size: 15px;
 }
 
+.quantity, .button-add-cart {
+    margin-top: 30px;
+}
+
+.single-select-button {
+    background: #fff;
+    width: 100px;
+    outline: none;
+    height: 30px;
+}
+
 /* mobile view */
 
 @media only screen and (max-width: 800px) {

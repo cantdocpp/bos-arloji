@@ -1,0 +1,45 @@
+.cart-page {
+    padding: 100px 0px;
+}
+
+.cart-header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.cart-table {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.cart-table-head {
+    border-bottom: 1px solid #000;
+}
+
+th {
+    padding: 15px 0px;
+    font-size: 14px;
+}
+
+td {
+    padding: 20px 0px;
+}
+
+.tr-body {
+    border-bottom: 1px solid #000;
+}
+
+.cart-image {
+    width: 120px;
+    height: 120px;
+}
+
+.cart-remove {
+    border: none;
+    color: blue;
+    font-size: 14px;
+}
+
+.cart-remove:hover {
+    text-decoration: underline;
+}
