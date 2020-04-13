@@ -15,12 +15,29 @@
     wp_enqueue_style( "form-style", get_template_directory_uri() . '/assets/css/form.css' , NULL , microtime() );
     wp_enqueue_style( "user-style", get_template_directory_uri() . '/assets/css/user.css' , NULL , microtime() );
     wp_enqueue_style( "cart-style", get_template_directory_uri() . '/assets/css/cart.css' , NULL , microtime() );
-
+    wp_enqueue_style( "checkout-style", get_template_directory_uri() . '/assets/css/checkout.css' , NULL , microtime() );
   }
 
   function my_filter_head() {
     remove_action('wp_head', '_admin_bar_bump_cb');
   }
+
+  function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce', array(
+      'thumbnail_image_width' => 150,
+      'single_image_width'    => 300,
+  
+          'product_grid'          => array(
+              'default_rows'    => 3,
+              'min_rows'        => 2,
+              'max_rows'        => 8,
+              'default_columns' => 4,
+              'min_columns'     => 2,
+              'max_columns'     => 5,
+          ),
+    ) );
+  }
+  add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
   // when adding product to the cart success and user refresh the page,
   // it still adding the qty to the cart everytime user refresh
@@ -95,6 +112,11 @@
     }
   }
 
+  function woocommmerce_style() {
+    wp_enqueue_style('woocommerce_stylesheet', WP_PLUGIN_URL. '/woocommerce/assets/css/woocommerce.css',false,'1.0',"all");
+  }
+  add_action( 'wp_head', 'woocommmerce_style' );
+
   add_action('show_user_profile', 'mysite_show_extra_profile_fields');
   add_action('edit_user_profile', 'mysite_show_extra_profile_fields');
   add_action('personal_options_update', 'mysite_save_extra_profile_fields');
@@ -106,4 +128,3 @@
   add_action("wp_enqueue_scripts", "theme_script");
   add_action('get_header', 'my_filter_head');
   add_action('add_to_cart_redirect', 'resolve_dupes_add_to_cart_redirect');
-

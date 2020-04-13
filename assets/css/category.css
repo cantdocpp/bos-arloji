@@ -7,3 +7,20 @@
   font-size: 30px;
   font-weight: 600;
 }
+
+.product-category-nav {
+  margin-top: 50px;
+}
+
+.product-category-ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.product-category-li {
+  display: inline-block;
+}
+
+.product-category-li:last-child {
+  margin-left: 15px;
+}
