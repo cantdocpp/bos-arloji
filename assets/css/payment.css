@@ -1,0 +1,13 @@
+.payment-confirmation {
+    padding-top: 100px;
+}
+
+.payment-main {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.wa-link {
+    font-size: inherit;
+    color: blue;
+}

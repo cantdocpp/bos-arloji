@@ -16,6 +16,7 @@
     wp_enqueue_style( "user-style", get_template_directory_uri() . '/assets/css/user.css' , NULL , microtime() );
     wp_enqueue_style( "cart-style", get_template_directory_uri() . '/assets/css/cart.css' , NULL , microtime() );
     wp_enqueue_style( "checkout-style", get_template_directory_uri() . '/assets/css/checkout.css' , NULL , microtime() );
+    wp_enqueue_style( "payment-style", get_template_directory_uri() . '/assets/css/payment.css' , NULL , microtime() );
   }
 
   function my_filter_head() {

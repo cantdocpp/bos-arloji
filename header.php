@@ -19,7 +19,7 @@
 
         <div class="site__menu-center">
           <div class="dropdown__menu menu main__menu">
-            <a href="#" class="dropdown__text">Watches</a>
+            <a href="<?php echo get_site_url() ?>/man-watch/" class="dropdown__text">Watches</a>
             <div class="dropdown__content">
               <a href="<?php echo get_site_url() ?>/man-watch/" class="dropdown__content-item">Man Watch</a>
               <a href="<?php echo get_site_url() ?>/woman-watch/" class="dropdown__content-item">Woman Watch</a>
@@ -27,13 +27,13 @@
           </div>
           
           <div class="menu main__menu">
-            <a href="#" class="site__menu">
+            <a href="<?php echo get_site_url() ?>/accessories/" class="site__menu">
               Accessories
             </a>
           </div>
           
           <div class="menu main__menu">
-            <a href="#" class="site__menu">
+            <a href="<?php echo get_site_url() ?>/payment-confirmation" class="site__menu">
               Payment Confirmation
             </a>
           </div>

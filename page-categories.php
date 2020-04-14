@@ -51,6 +51,9 @@
           } else if (strpos($current_url, 'man-watch') == true) {
             echo 'Man Watch';
             $current_cat = 'man watch';
+          } else if (strpos($current_url, 'accessories') == true) {
+            echo 'Accessories';
+            $current_cat = 'accessories';
           }
         ?>
       </div>
